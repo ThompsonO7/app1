@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>todo</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style type="text/css">
+    body {
+        background-color: #555;
+        color: #fff;
+    }
+        h1 {
+            margin-top: 10rem;
+            margin-bottom: 3rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Image and text varbar -->
+<nav class="navbar navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">
+    <i class="fas fa-list"></i>
+      TODO LIST
+    </a>
+  </nav>
+
+  <%let i = 1; todolist.forEach((todo, i) => { %>
+    <table class="table table-light blue">
+        <thead>
+            <tr>
+                <th scope="col"><%= todo.Department %> </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row"><%= todo.task %></th>
+            </tr>
+        </tbody>
+    </table>
+      
+    <div scope="row"><%= i %> </div>
+    
+<% }) %>
+
+    </html>
+     
